@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es6",
     "module": "CommonJS",
-    "rootDir": "./src",
+    "rootDir": "./",        // CHANGE: "./src" se "./" kar
     "outDir": "./dist",
     "esModuleInterop": true,
     "strict": false,
     "skipLibCheck": true
   },
-  "include": ["src/**/*"]
+  "include": ["**/*.ts"]    // CHANGE: "src/**/*" se "**/*.ts" kar
 }

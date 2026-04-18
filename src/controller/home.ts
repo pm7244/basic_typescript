@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { Testimonial } from "../../model/testimonialModel";
-import { Service } from "../../model/serviceModel";
+import { Testimonial } from "../model/testimonialModel";
+import { Service } from "../model/serviceModel";
 
- const getHomePage = async (req: Request, res: Response) => {
+export const renderHomePage = async (req: Request, res: Response) => {
   try {
     const testimonials = await Testimonial.find({ status: 1 });
     const services = await Service.find({ status: 1 });
@@ -18,7 +18,5 @@ import { Service } from "../../model/serviceModel";
     res.status(500).send("Server Error: " + error.message);
   }
 };
-
-export { getHomePage };
 
 

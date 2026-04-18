@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Slider } from "../../model/sliderModel";
+import { Slider } from "../model/sliderModel";
 
 export const renderSlidersPage = async (req: Request, res: Response) => {
   try {

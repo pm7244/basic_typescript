@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Testimonial } from "../../model/testimonialModel";
+import { Testimonial } from "../model/testimonialModel";
 
 export const renderTestimonialsPage = async (req: Request, res: Response) => {
   try {

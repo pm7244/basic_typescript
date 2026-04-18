@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "CommonJS",
-    "rootDir": "./",        // CHANGE: "./src" se "./" kar
+  "rootDir": "./src",        // CHANGE: "./src" se "./" kar
     "outDir": "./dist",
     "esModuleInterop": true,
     "strict": false,

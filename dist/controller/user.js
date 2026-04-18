@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -7,16 +8,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const db = require("../../config/db");
-const getAllContact = (req, res) => __awaiter(this, void 0, void 0, function* () {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.renderUsersPage = void 0;
+const userModel_1 = require("../model/userModel");
+const renderUsersPage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // Render the EJS page and pass data
-        res.render("home", {});
+        const users = yield userModel_1.User.find({ status: 1 }).sort({ createdAt: -1 });
+        res.render("pages/users", {
+            title: "Users",
+            users
+        });
     }
     catch (error) {
         res.status(500).send("Server Error: " + error.message);
     }
 });
-module.exports = {
-    getAllContact,
-};
+exports.renderUsersPage = renderUsersPage;

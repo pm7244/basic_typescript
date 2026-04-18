@@ -3,22 +3,23 @@
   "version": "1.0.0",
   "description": "TypeScript MongoDB CRUD Project",
   "main": "dist/index.js",
-  "scripts": {
+"scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "npx --yes tsc",
+    "build": "npm install -g typescript && tsc",
     "start": "node dist/index.js",
     "vercel-start": "node dist/index.js"
-  },
+},
   "author": "mukesh",
   "license": "ISC",
-  "dependencies": {
+"dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ejs": "^5.0.2",
     "express": "^4.19.2",
     "express-session": "^1.19.0",
-    "mongoose": "^8.0.0"
-  },
+    "mongoose": "^8.0.0",
+    "typescript": "^5.0.0"
+},
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.0.0",
